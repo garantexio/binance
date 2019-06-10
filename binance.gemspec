@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['charles@cray.io']
 
   spec.summary       = 'API Wrapper for the Binance cryptocurrency exchange.'
-  spec.homepage      = 'https://github.com/craysiii/binance'
+  spec.homepage      = 'https://github.com/profforg/binance'
   spec.license       = 'MIT'
 
   spec.files         = Dir['bin/*'] +
