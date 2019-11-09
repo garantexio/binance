@@ -23,6 +23,7 @@ module Binance
         account:          'v3/account',
         my_trades:        'v3/myTrades',
         user_data_stream: 'v1/userDataStream',
+        coin_detail:      'v1/capital/config/getall',
 
         # Withdraw API Endpoints
         withdraw:         'v3/withdraw.html',

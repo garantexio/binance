@@ -74,6 +74,9 @@ module Binance
         # #close_stream!
         { name: :close_stream!, client: :verified,
           action: :delete, endpoint: :user_data_stream },
+        # #cpin detail
+        { name: :coin_detail, client: :sapi,
+          action: :get, endpoint: :coin_detail },
 
         # Withdraw API Methods
         # #withdraw!
