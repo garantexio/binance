@@ -74,7 +74,7 @@ module Binance
         # #close_stream!
         { name: :close_stream!, client: :verified,
           action: :delete, endpoint: :user_data_stream },
-        # #cpin detail
+        # #coin_detail
         { name: :coin_detail, client: :sapi,
           action: :get, endpoint: :coin_detail },
 
@@ -83,10 +83,10 @@ module Binance
         { name: :withdraw!, client: :withdraw,
           action: :post, endpoint: :withdraw },
         # #deposit_history
-        { name: :deposit_history, client: :withdraw,
+        { name: :deposit_history, client: :sapi,
           action: :get, endpoint: :deposit_history },
         # #withdraw_history
-        { name: :withdraw_history, client: :withdraw,
+        { name: :withdraw_history, client: :sapi,
           action: :get, endpoint: :withdraw_history },
         # #deposit_address
         { name: :deposit_address, client: :withdraw,

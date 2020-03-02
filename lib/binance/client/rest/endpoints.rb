@@ -27,8 +27,8 @@ module Binance
 
         # Withdraw API Endpoints
         withdraw:         'v3/withdraw.html',
-        deposit_history:  'v3/depositHistory.html',
-        withdraw_history: 'v3/withdrawHistory.html',
+        deposit_history:  'v1/capital/deposit/hisrec',
+        withdraw_history: 'v1/capital/withdraw/history',
         deposit_address:  'v3/depositAddress.html',
         account_status:   'v3/accountStatus.html',
         system_status:    'v3/systemStatus.html',
