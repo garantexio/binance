@@ -89,7 +89,7 @@ module Binance
         { name: :withdraw_history, client: :sapi,
           action: :get, endpoint: :withdraw_history },
         # #wapi_withdraw_history
-        { name: :wapi_withdraw_history, client: :wapi,
+        { name: :wapi_withdraw_history, client: :withdraw,
           action: :get, endpoint: :wapi_withdraw_history },
         # #deposit_address
         { name: :deposit_address, client: :withdraw,
