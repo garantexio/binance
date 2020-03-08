@@ -26,14 +26,15 @@ module Binance
         coin_detail:      'v1/capital/config/getall',
 
         # Withdraw API Endpoints
-        withdraw:         'v3/withdraw.html',
-        deposit_history:  'v1/capital/deposit/hisrec',
-        withdraw_history: 'v1/capital/withdraw/history',
-        deposit_address:  'v3/depositAddress.html',
-        account_status:   'v3/accountStatus.html',
-        system_status:    'v3/systemStatus.html',
-        asset_detail:     'v3/assetDetail.html',
-        dust_log:         'v3/userAssetDribbletLog.html'
+        withdraw:               'v3/withdraw.html',
+        deposit_history:        'v1/capital/deposit/hisrec',
+        withdraw_history:       'v1/capital/withdraw/history',
+        wapi_withdraw_history:  'v3/withdrawHistory.html',
+        deposit_address:        'v3/depositAddress.html',
+        account_status:         'v3/accountStatus.html',
+        system_status:          'v3/systemStatus.html',
+        asset_detail:           'v3/assetDetail.html',
+        dust_log:               'v3/userAssetDribbletLog.html'
       }.freeze
     end
   end
