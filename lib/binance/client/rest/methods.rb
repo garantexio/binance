@@ -39,6 +39,9 @@ module Binance
         # #book_ticker
         { name: :book_ticker, client: :public,
           action: :get, endpoint: :book_ticker },
+        # #average_price
+        { name: :average_price, client: :public,
+          action: :get, endpoint: :average_price },
 
         # Account API Methods
         # #create_order!

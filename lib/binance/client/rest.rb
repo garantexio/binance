@@ -28,7 +28,8 @@ module Binance
             req.url ENDPOINTS[method[:endpoint]]
             req.params.merge! options.map { |k, v| [camelize(k.to_s), v] }.to_h
           end
-          response.body
+          data = response.body
+          data.class.name == 'String' ? JSON.parse(data) : data
         end
       end
 

@@ -3,17 +3,18 @@ module Binance
     class REST
       ENDPOINTS = {
         # Public API Endpoints
-        ping:              'v1/ping',
-        time:              'v1/time',
-        exchange_info:     'v1/exchangeInfo',
-        depth:             'v1/depth',
-        trades:            'v1/trades',
-        historical_trades: 'v1/historicalTrades',
-        agg_trades:        'v1/aggTrades',
-        klines:            'v1/klines',
-        twenty_four_hour:  'v1/ticker/24hr',
+        ping:              'v3/ping',
+        time:              'v3/time',
+        exchange_info:     'v3/exchangeInfo',
+        depth:             'v3/depth',
+        trades:            'v3/trades',
+        historical_trades: 'v3/historicalTrades',
+        agg_trades:        'v3/aggTrades',
+        klines:            'v3/klines',
+        twenty_four_hour:  'v3/ticker/24hr',
         price:             'v3/ticker/price',
         book_ticker:       'v3/ticker/bookTicker',
+        average_price:     'v3/avgPrice',
 
         # Account API Endpoints
         order:            'v3/order',
@@ -22,7 +23,7 @@ module Binance
         all_orders:       'v3/allOrders',
         account:          'v3/account',
         my_trades:        'v3/myTrades',
-        user_data_stream: 'v1/userDataStream',
+        user_data_stream: 'v3/userDataStream',
         coin_detail:      'v1/capital/config/getall',
 
         # Withdraw API Endpoints
