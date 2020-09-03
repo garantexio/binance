@@ -43,6 +43,11 @@ module Binance
         { name: :average_price, client: :public,
           action: :get, endpoint: :average_price },
 
+        # Savings Endpoints API Methods
+        # #lending_account_info
+        { name: :lending_account_info, client: :sapi,
+          action: :get, endpoint: :lending_account },
+
         # Account API Methods
         # #create_order!
         { name: :create_order!, client: :signed,

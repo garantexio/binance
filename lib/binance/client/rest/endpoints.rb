@@ -26,6 +26,9 @@ module Binance
         user_data_stream: 'v3/userDataStream',
         coin_detail:      'v1/capital/config/getall',
 
+        # Savings Endpoints
+        lending_account:  'v1/lending/union/account',
+
         # Withdraw API Endpoints
         withdraw:               'v3/withdraw.html',
         deposit_history:        'v1/capital/deposit/hisrec',
