@@ -11,14 +11,14 @@ module Binance
     class REST
       BASE_URL = 'https://api.binance.com'.freeze
 
-      def initialize(api_key: '', secret_key: '',
+      def initialize(api_key: '', secret_key: '', recv_window: nil,
                      adapter: Faraday.default_adapter)
         @clients = {}
         @clients[:public]   = public_client adapter
         @clients[:verified] = verified_client api_key, adapter
-        @clients[:signed]   = signed_client api_key, secret_key, adapter
-        @clients[:withdraw] = withdraw_client api_key, secret_key, adapter
-        @clients[:sapi]     = sapi_client api_key, secret_key, adapter
+        @clients[:signed]   = signed_client api_key, secret_key, recv_window, adapter
+        @clients[:withdraw] = withdraw_client api_key, secret_key, recv_window, adapter
+        @clients[:sapi]     = sapi_client api_key, secret_key, recv_window, adapter
         @clients[:public_withdraw] = public_withdraw_client adapter
       end
 

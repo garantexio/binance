@@ -19,12 +19,12 @@ module Binance
         end
       end
 
-      def signed_client(api_key, secret_key, adapter)
+      def signed_client(api_key, secret_key, recv_window, adapter)
         Faraday.new(url: "#{BASE_URL}/api") do |conn|
           conn.request :json
           conn.response :json, content_type: /\bjson$/
           conn.headers['X-MBX-APIKEY'] = api_key
-          conn.use TimestampRequestMiddleware
+          conn.use TimestampRequestMiddleware, recv_window
           conn.use SignRequestMiddleware, secret_key
           conn.adapter adapter
         end
@@ -38,23 +38,23 @@ module Binance
         end
       end
 
-      def withdraw_client(api_key, secret_key, adapter)
+      def withdraw_client(api_key, secret_key, recv_window, adapter)
         Faraday.new(url: "#{BASE_URL}/wapi") do |conn|
           conn.request :url_encoded
           conn.response :json, content_type: /\bjson$/
           conn.headers['X-MBX-APIKEY'] = api_key
-          conn.use TimestampRequestMiddleware
+          conn.use TimestampRequestMiddleware, recv_window
           conn.use SignRequestMiddleware, secret_key
           conn.adapter adapter
         end
       end
 
-      def sapi_client(api_key, secret_key, adapter)
+      def sapi_client(api_key, secret_key, recv_window, adapter)
         Faraday.new(url: "#{BASE_URL}/sapi") do |conn|
           conn.request :json
           conn.response :json, content_type: /\bjson$/
           conn.headers['X-MBX-APIKEY'] = api_key
-          conn.use TimestampRequestMiddleware
+          conn.use TimestampRequestMiddleware, recv_window
           conn.use SignRequestMiddleware, secret_key
           conn.adapter adapter
         end
