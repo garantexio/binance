@@ -19,7 +19,7 @@ module Binance
         @clients[:signed]   = signed_client api_key, secret_key, recv_window, adapter
         @clients[:withdraw] = withdraw_client api_key, secret_key, recv_window, adapter
         @clients[:sapi]     = sapi_client api_key, secret_key, recv_window, adapter
-        @clients[:public_withdraw] = public_withdraw_client adapter
+        @clients[:public_sapi] = public_sapi_client adapter
       end
 
       METHODS.each do |method|

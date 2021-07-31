@@ -88,7 +88,7 @@ module Binance
 
         # Withdraw API Methods
         # #withdraw!
-        { name: :withdraw!, client: :withdraw,
+        { name: :withdraw!, client: :sapi,
           action: :post, endpoint: :withdraw },
         # #deposit_history
         { name: :deposit_history, client: :sapi,
@@ -96,23 +96,20 @@ module Binance
         # #withdraw_history
         { name: :withdraw_history, client: :sapi,
           action: :get, endpoint: :withdraw_history },
-        # #wapi_withdraw_history
-        { name: :wapi_withdraw_history, client: :withdraw,
-          action: :get, endpoint: :wapi_withdraw_history },
         # #deposit_address
-        { name: :deposit_address, client: :withdraw,
+        { name: :deposit_address, client: :sapi,
           action: :get, endpoint: :deposit_address },
         # #account_status
-        { name: :account_status, client: :withdraw,
+        { name: :account_status, client: :sapi,
           action: :get, endpoint: :account_status },
         # #system_status
-        { name: :system_status, client: :public_withdraw,
+        { name: :system_status, client: :public_sapi,
           action: :get, endpoint: :system_status },
         # #asset detail
-        { name: :asset_detail, client: :withdraw,
+        { name: :asset_detail, client: :sapi,
           action: :get, endpoint: :asset_detail },
         # dust_log
-        { name: :dust_log, client: :withdraw,
+        { name: :dust_log, client: :sapi,
           action: :get, endpoint: :dust_log }
       ].freeze
     end

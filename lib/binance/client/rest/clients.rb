@@ -30,8 +30,8 @@ module Binance
         end
       end
 
-      def public_withdraw_client(adapter)
-        Faraday.new(url: "#{BASE_URL}/wapi") do |conn|
+      def public_sapi_client(adapter)
+        Faraday.new(url: "#{BASE_URL}/sapi") do |conn|
           conn.request :json
           conn.response :json, content_type: /\bjson$/
           conn.adapter adapter

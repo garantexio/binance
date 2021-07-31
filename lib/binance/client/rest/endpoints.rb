@@ -30,15 +30,14 @@ module Binance
         lending_account:  'v1/lending/union/account',
 
         # Withdraw API Endpoints
-        withdraw:               'v3/withdraw.html',
+        withdraw:               'v1/capital/withdraw/apply',
         deposit_history:        'v1/capital/deposit/hisrec',
         withdraw_history:       'v1/capital/withdraw/history',
-        wapi_withdraw_history:  'v3/withdrawHistory.html',
-        deposit_address:        'v3/depositAddress.html',
-        account_status:         'v3/accountStatus.html',
-        system_status:          'v3/systemStatus.html',
-        asset_detail:           'v3/assetDetail.html',
-        dust_log:               'v3/userAssetDribbletLog.html'
+        deposit_address:        'v1/capital/deposit/address',
+        account_status:         'v1/account/status',
+        system_status:          'v1/system/status',
+        asset_detail:           'v1/asset/assetDetail',
+        dust_log:               'v1/asset/dribblet'
       }.freeze
     end
   end
